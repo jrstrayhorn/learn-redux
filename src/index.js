@@ -1,4 +1,15 @@
-import store from './store'
+import React from 'react'
+import { render } from 'react-dom'
+import App from './components/App'
+
+window.React = React
+
+render(
+    <App />,
+    document.getElementById('react-container')
+)
+
+/*import store from './store'
 import { removeColor, rateColor, addColor } from './actions'
 
 
@@ -22,10 +33,11 @@ store.dispatch( rateColor("3315e1p5-3abl-0p523-30e4-8001l8yf3036", 4))
 store.dispatch({
     type: "REMOVE_COLOR",
     id: "3315e1p5-3abl-0p523-30e4-8001l8yf2412"
-})*/
+})
 
 //console.log( "Length of colors array after ADD_COLOR", store.getState().colors.length )
 
 
 
 console.log('Go ahead, dispatch some actions...')
+*/

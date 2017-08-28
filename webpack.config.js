@@ -19,6 +19,24 @@ module.exports = {
                 query: {
                     presets: ['env', 'stage-0', 'react']
                 }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader','css-loader', {
+                    loader: 'postcss-loader',
+                    options: {
+                        plugins: () => [require('autoprefixer')]
+                    }
+                }]
+            },
+            {
+                test: /\.scss/,
+                use: ['style-loader','css-loader', {
+                    loader: 'postcss-loader',
+                    options: {
+                        plugins: () => [require('autoprefixer')]
+                    }
+                }, 'sass-loader']
             }
         ]
     },
