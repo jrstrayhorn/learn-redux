@@ -3,7 +3,7 @@ import '../../stylesheets/AddColorForm.scss'
 import { addColor } from '../actions'
 
 
-const AddColorForm = ({store}) => {
+const AddColorForm = (props, {store}) => {
 
     let _title, _color
 
@@ -24,7 +24,7 @@ const AddColorForm = ({store}) => {
     )
 }
 
-AddColorForm.propTypes = {
+AddColorForm.contextTypes = {
     store: PropTypes.object
 }
 
