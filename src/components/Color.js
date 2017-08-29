@@ -8,7 +8,7 @@ import { rateColor, removeColor } from '../actions'
 class Color extends Component {
     
     render() {
-        const { title, color, rating, timestamp, onRemove, onRate} = this.props
+        const { id, title, color, rating, timestamp, onRemove, onRate} = this.props
         const { store } = this.context
         return (
             <section className="color" style={this.style}>
@@ -34,17 +34,14 @@ Color.contextTypes = {
 }
 
 Color.propTypes = {
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isReqired,
     color: PropTypes.string.isRequired,
-    rating: PropTypes.number,
-    onRemove: PropTypes.func,
-    onRate: PropTypes.func
+    rating: PropTypes.number
 }
 
 Color.defaultProps = {
-    rating: 0,
-    onRemove: f=>f,
-    onRate: f=>f
+    rating: 0
 }
 
 export default Color

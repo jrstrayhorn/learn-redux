@@ -24,13 +24,13 @@ class App extends Component {
     }
 
     render() {
-        const { colors, sort } = store.geteState()
+        const { colors, sort } = store.getState()
         const sortedColors = [...colors].sort(sortFunction(sort))
         return (
             <div className="app">
                 <SortMenu></SortMenu>
                 <AddColorForm></AddColorForm>
-                <ColorList store={sortedColors}></ColorList>
+                <ColorList colors={sortedColors}></ColorList>
             </div>
         )
     }

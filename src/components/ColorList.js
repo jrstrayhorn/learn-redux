@@ -2,7 +2,7 @@ import { PropTypes } from 'react'
 import Color from './Color'
 import '../../stylesheets/ColorList.scss'
 
-const ColorList = ({ colors=[] }) => {
+const ColorList = ({ colors=[] }) => 
     <div className="color-list">
         {(colors.length === 0) ?
             <p>No Colors Listed.  (Add a Color)</p> :
@@ -13,7 +13,7 @@ const ColorList = ({ colors=[] }) => {
             )
         }
     </div>
-}
+
 
 ColorList.propTypes = {
     colors: PropTypes.array
