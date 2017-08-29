@@ -8,7 +8,7 @@ const options = {
     rating: "SORTED_BY_RATING"
 }
 
-const SortMenu = ({ store }) =>
+const SortMenu = (props, { store }) =>
     <nav className="menu">
         <h1>Sort Colors</h1>
         {Object.keys(options).map((item, i) =>
@@ -22,7 +22,7 @@ const SortMenu = ({ store }) =>
         )}
     </nav>
 
-SortMenu.PropTypes = {
+SortMenu.contextTypes = {
     store: PropTypes.object
 }
 
