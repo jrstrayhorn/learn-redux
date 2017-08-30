@@ -1,9 +1,6 @@
 import { PropTypes, Component } from 'react'
-import AddColorForm from './AddColorForm'
-import ColorList from './ColorList'
-import SortMenu from './SortMenu'
 import '../../stylesheets/APP.scss'
-import { sortFunction } from '../lib/array-helpers'
+import { Menu, NewColor, Colors } from './containers'
 
 class App extends Component {
 
@@ -24,13 +21,11 @@ class App extends Component {
     }
 
     render() {
-        const { colors, sort } = store.getState()
-        const sortedColors = [...colors].sort(sortFunction(sort))
         return (
             <div className="app">
-                <SortMenu></SortMenu>
-                <AddColorForm></AddColorForm>
-                <ColorList colors={sortedColors}></ColorList>
+                <Menu />
+                <NewColor />
+                <Colors />
             </div>
         )
     }
